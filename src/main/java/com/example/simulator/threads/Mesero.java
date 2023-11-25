@@ -12,13 +12,22 @@ public class Mesero implements Runnable {
         this.controller = controller;
     }
 
+    public void verificarOrdenLista() throws InterruptedException {
+        restaurante.verificarOrdenLista();
+    }
 
     public void servirComida() throws InterruptedException {
         restaurante.lock.lock();
         try {
             // Esperar a que haya comida lista y al menos un comensal
             while (!restaurante.bufferDeComidaListo || restaurante.comensalesEnRestaurante <= 0) {
-                restaurante.bufferVacio.await();
+                if (restaurante.comensalesEnRestaurante == 0) {
+                    // Si no hay comensales, los meseros descansan
+                    System.out.println("Mesero descansando...");
+                    restaurante.bufferVacio.await();
+                } else {
+                    restaurante.bufferVacio.await();
+                }
             }
 
             // Simular tiempo de llevar la comida al comensal
@@ -30,6 +39,8 @@ public class Mesero implements Runnable {
             Thread.sleep(3000);
 
             System.out.println("Comensal ha terminado de comer.");
+
+            // Liberar espacio en el restaurante
             restaurante.comensalesEnRestaurante--;
             restaurante.mesasOcupadas--;
 

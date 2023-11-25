@@ -2,6 +2,7 @@ package com.example.simulator.threads;
 
 import com.example.simulator.HelloController;
 import com.example.simulator.Restaurante;
+import com.example.simulator.Orden;
 
 public class Recepcionista implements Runnable {
     private Restaurante restaurante;
@@ -13,6 +14,15 @@ public class Recepcionista implements Runnable {
     }
 
     public void entrarComensal() throws InterruptedException {
+
+        Orden orden = new Orden(restaurante.comensalesEnRestaurante);
+
+        // Agregar la orden al buffer de órdenes
+        restaurante.bufferOrdenes.offer(orden);
+
+        // Agregar el comensal a la cola de espera
+        restaurante.colaEspera.offer(new Comensal(restaurante, controller, this));
+
         restaurante.lock.lock();
         restaurante.recepcionistaLock.lock();
         try {
