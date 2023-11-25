@@ -9,7 +9,7 @@ import java.io.IOException;
 
 import com.example.simulator.threads.Chef;
 import com.example.simulator.threads.Mesero;
-import com.example.simulator.threads.Comensal;
+//import com.example.simulator.threads.Comensal;
 import com.example.simulator.threads.Recepcionista;
 
 public class HelloApplication extends Application {
@@ -21,7 +21,6 @@ public class HelloApplication extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
 
         HelloController controller = fxmlLoader.getController();
-
 
         stage.setTitle("Hello!");
         stage.setScene(scene);
@@ -37,17 +36,18 @@ public class HelloApplication extends Application {
         Thread meseroThread = new Thread(new Mesero(restaurante, app.controller));
         Thread recepcionistaThread = new Thread(new Recepcionista(restaurante, app.controller));
 
-        Thread[] comensalThreads = new Thread[4];
-        for (int i = 0; i < comensalThreads.length; i++) {
-            comensalThreads[i] = new Thread(new Comensal(restaurante, app.controller));
+        int numMeseros = (int) (Restaurante.CAPACIDAD_MAXIMA * 0.3);
+        Thread[] meserosThreads = new Thread[numMeseros];
+        for (int i = 0; i < meserosThreads.length; i++) {
+            meserosThreads[i] = new Thread(new Mesero(restaurante, app.controller));
         }
 
         chefThread.start();
         meseroThread.start();
         recepcionistaThread.start();
 
-        for (Thread comensalThread : comensalThreads) {
-            comensalThread.start();
+        for (Thread meseroIndividualThread : meserosThreads) {
+            meseroIndividualThread.start();
         }
         launch();
     }

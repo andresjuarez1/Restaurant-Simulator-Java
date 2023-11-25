@@ -32,7 +32,4 @@ public class HelloController {
     public void updateRecepcionistaStatus(String status) {
         recepcionistaLabel.setText("Recepcionista: " + status);
     }
-
-    // Otros métodos del controlador
-    // ...
 }

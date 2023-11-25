@@ -12,11 +12,44 @@ public class Mesero implements Runnable {
         this.controller = controller;
     }
 
+
+    public void servirComida() throws InterruptedException {
+        restaurante.lock.lock();
+        try {
+            // Esperar a que haya comida lista y al menos un comensal
+            while (!restaurante.bufferDeComidaListo || restaurante.comensalesEnRestaurante <= 0) {
+                restaurante.bufferVacio.await();
+            }
+
+            // Simular tiempo de llevar la comida al comensal
+            Thread.sleep(2000);
+
+            System.out.println("Mesero lleva la comida al comensal.");
+
+            // Comensal come
+            Thread.sleep(3000);
+
+            System.out.println("Comensal ha terminado de comer.");
+            restaurante.comensalesEnRestaurante--;
+            restaurante.mesasOcupadas--;
+
+            System.out.println("Comensal sale del restaurante. Comensales en el restaurante: " +
+                    restaurante.comensalesEnRestaurante + ". Mesas disponibles en el restaurante: " +
+                    restaurante.mesasOcupadas);
+
+            // Notificar al chef que hay espacio para cocinar más
+            restaurante.bufferDeComidaListo = false;
+            restaurante.bufferLleno.signal();
+        } finally {
+            restaurante.lock.unlock();
+        }
+    }
+
     @Override
     public void run() {
         while (true) {
             try {
-                restaurante.servirComida();
+                servirComida();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
