@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.simulator.HelloController">
-  <padding>
-    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-  </padding>
-
-  <Label fx:id="welcomeText"/>
-  <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<GridPane xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10" fx:controller="com.example.simulator.HelloController">
+    <Label text="Estado del Restaurante" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+    <Label fx:id="chefLabel" text="Chef: Esperando" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+    <Label fx:id="meseroLabel" text="Mesero: Esperando" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+    <Label fx:id="comensalLabel" text="Comensal: Esperando" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+    <Label fx:id="recepcionistaLabel" text="Recepcionista: Esperando" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+</GridPane>

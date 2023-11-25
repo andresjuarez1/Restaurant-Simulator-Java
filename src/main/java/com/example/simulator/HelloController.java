@@ -5,10 +5,34 @@ import javafx.scene.control.Label;
 
 public class HelloController {
     @FXML
-    private Label welcomeText;
+    private Label chefLabel;
 
     @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+    private Label meseroLabel;
+
+    @FXML
+    private Label comensalLabel;
+
+    @FXML
+    private Label recepcionistaLabel;
+
+    // Métodos para actualizar la interfaz gráfica
+    public void updateChefStatus(String status) {
+        chefLabel.setText("Chef: " + status);
     }
+
+    public void updateMeseroStatus(String status) {
+        meseroLabel.setText("Mesero: " + status);
+    }
+
+    public void updateComensalStatus(String status) {
+        comensalLabel.setText("Comensal: " + status);
+    }
+
+    public void updateRecepcionistaStatus(String status) {
+        recepcionistaLabel.setText("Recepcionista: " + status);
+    }
+
+    // Otros métodos del controlador
+    // ...
 }
