@@ -1,14 +1,17 @@
 package com.example.simulator.threads;
 
 import com.example.simulator.Restaurante;
+import com.example.simulator.Orden;
+import com.example.simulator.Comida;
 import com.example.simulator.HelloController;
 import javafx.application.Platform;
-
 
 public class Chef implements Runnable {
     private Restaurante restaurante;
     private HelloController controller;
     private volatile boolean running = true;
+
+
 
     public Chef(Restaurante restaurante, HelloController controller) {
         this.restaurante = restaurante;
@@ -18,15 +21,24 @@ public class Chef implements Runnable {
     public void cocinar() throws InterruptedException {
         restaurante.lock.lock();
         try {
-            // Si ya hay comida lista, espera a que se consuma antes de cocinar más
-            while (restaurante.bufferDeComidaListo) {
-                restaurante.bufferLleno.await();
+            // Espera hasta que haya una orden en el buffer de órdenes
+            while (restaurante.bufferOrdenes.isEmpty()) {
+                restaurante.bufferVacio.await();
             }
-            Thread.sleep(8000);
-            System.out.println("Chef ha cocinado la comida.");
 
-            restaurante.bufferDeComidaListo = true;
-            restaurante.bufferVacio.signal();
+            // Simular tiempo de cocina
+            Thread.sleep(4000);
+
+            // Tomar la orden del buffer y cocinarla
+            Orden orden = restaurante.bufferOrdenes.poll();
+            Comida comida = new Comida(orden);
+
+            // Agregar la comida al buffer de comidas
+            restaurante.bufferComidas.offer(comida);
+            System.out.println("Chef ha cocinado la orden.");
+
+            // Notificar a los meseros que la comida está lista
+            restaurante.bufferLleno.signal();
         } finally {
             restaurante.lock.unlock();
         }
@@ -44,10 +56,12 @@ public class Chef implements Runnable {
                     }
                 });
             } catch (InterruptedException e) {
+                Thread.currentThread().interrupt(); // Restaura la bandera interrupted
                 e.printStackTrace();
             }
         }
     }
+
 
     public void stopRunning() {
         running = false;

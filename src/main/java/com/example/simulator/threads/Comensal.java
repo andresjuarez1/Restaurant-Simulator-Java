@@ -15,7 +15,6 @@ public class Comensal implements Runnable {
         this.controller = controller;
         this.recepcionista = recepcionista;
     }
-
     @Override
     public void run() {
         while (true) {

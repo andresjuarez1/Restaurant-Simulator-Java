@@ -26,31 +26,6 @@ public class Restaurante {
         this.numCocineros = (int) (CAPACIDAD_MAXIMA * 0.1);
     }
 
-    public void cocinarOrden() throws InterruptedException {
-        lock.lock();
-        try {
-            // Espera hasta que haya una orden en el buffer de órdenes
-            while (bufferOrdenes.isEmpty()) {
-                bufferVacio.await();
-            }
-
-            // Simular tiempo de cocina
-            Thread.sleep(4000);
-
-            // Tomar la orden del buffer y cocinarla
-            Orden orden = bufferOrdenes.poll();
-            Comida comida = new Comida(orden);
-
-            // Agregar la comida al buffer de comidas
-            bufferComidas.offer(comida);
-            System.out.println("Cocinero ha preparado la orden.");
-
-            // Notificar a los meseros que la comida está lista
-            bufferLleno.signal();
-        } finally {
-            lock.unlock();
-        }
-    }
 
     public void verificarOrdenLista() throws InterruptedException {
         lock.lock();

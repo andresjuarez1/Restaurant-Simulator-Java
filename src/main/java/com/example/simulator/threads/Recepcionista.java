@@ -38,10 +38,15 @@ public class Recepcionista implements Runnable {
                     ". Mesas ocupadas: " + restaurante.mesasOcupadas);
 
             //if (restaurante.comensalesEnRestaurante < Restaurante.CAPACIDAD_MAXIMA) {
-            if (restaurante.comensalesEnRestaurante + 1 < Restaurante.CAPACIDAD_MAXIMA && restaurante.mesasOcupadas + 1 < Restaurante.CAPACIDAD_MAXIMA){
+            //if (restaurante.comensalesEnRestaurante + 1 < Restaurante.CAPACIDAD_MAXIMA && restaurante.mesasOcupadas + 1 < Restaurante.CAPACIDAD_MAXIMA){
+                //restaurante.bufferDeComidaListo = true;
+                //restaurante.bufferVacio.signal();
+            //}
+            if (restaurante.comensalesEnRestaurante + 1 < Restaurante.CAPACIDAD_MAXIMA && restaurante.mesasOcupadas + 1 < Restaurante.CAPACIDAD_MAXIMA) {
                 restaurante.bufferDeComidaListo = true;
                 restaurante.bufferVacio.signal();
             }
+
         } finally {
             restaurante.lock.unlock();
             restaurante.recepcionistaLock.unlock();
