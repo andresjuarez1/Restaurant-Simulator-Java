@@ -11,8 +11,6 @@ public class Chef implements Runnable {
     private HelloController controller;
     private volatile boolean running = true;
 
-
-
     public Chef(Restaurante restaurante, HelloController controller) {
         this.restaurante = restaurante;
         this.controller = controller;
@@ -29,15 +27,14 @@ public class Chef implements Runnable {
             // Simular tiempo de cocina
             Thread.sleep(4000);
 
-            // Tomar la orden del buffer y cocinarla
-            Orden orden = restaurante.bufferOrdenes.poll();
-            Comida comida = new Comida(orden);
+            for (int i = 0; i < Restaurante.TAMANO_BUFFER_COMIDA; i++) {
+                Orden orden = restaurante.bufferOrdenes.poll();
+                Comida comida = new Comida(orden);
+                restaurante.bufferComidas.offer(comida);
+            }
 
-            // Agregar la comida al buffer de comidas
-            restaurante.bufferComidas.offer(comida);
-            System.out.println("Chef ha cocinado la orden.");
+            System.out.println("Chef ha cocinado la orden. Comida en el buffer: " + restaurante.bufferComidas.size());
 
-            // Notificar a los meseros que la comida está lista
             restaurante.bufferLleno.signal();
         } finally {
             restaurante.lock.unlock();

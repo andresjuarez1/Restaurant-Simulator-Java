@@ -2,6 +2,7 @@ package com.example.simulator.threads;
 
 import com.example.simulator.HelloController;
 import com.example.simulator.Restaurante;
+import com.example.simulator.Comida;
 
 public class Mesero implements Runnable {
     public Restaurante restaurante;
@@ -19,38 +20,36 @@ public class Mesero implements Runnable {
     public void servirComida() throws InterruptedException {
         restaurante.lock.lock();
         try {
-            // Esperar a que haya comida lista y al menos un comensal
-            while (!restaurante.bufferDeComidaListo || restaurante.comensalesEnRestaurante <= 0) {
-                if (restaurante.comensalesEnRestaurante == 0) {
-                    // Si no hay comensales, los meseros descansan
-                    System.out.println("Mesero descansando...");
-                    restaurante.bufferVacio.await();
-                } else {
-                    restaurante.bufferVacio.await();
-                }
+            // Espera hasta que haya comensales en el restaurante
+            while (restaurante.comensalesEnRestaurante <= 0) {
+                System.out.println("Mesero descansando...");
+                restaurante.bufferVacio.await();
             }
 
-            // Simular tiempo de llevar la comida al comensal
-            Thread.sleep(2000);
+            // Si hay comida en el buffer, intenta servirla
+            if (!restaurante.bufferComidas.isEmpty()) {
+                // Simular tiempo de servir
+                Thread.sleep(2000);
 
-            System.out.println("Mesero lleva la comida al comensal.");
+                Comida comida = restaurante.bufferComidas.poll();
+                System.out.println("Mesero lleva la comida al comensal. Comida en el buffer: " + restaurante.bufferComidas.size());
 
-            // Comensal come
-            Thread.sleep(3000);
+                // Comensal come
+                Thread.sleep(3000);
+                System.out.println("Comensal ha terminado de comer.");
 
-            System.out.println("Comensal ha terminado de comer.");
+                // Liberar mesa
+                restaurante.mesasOcupadas--;
+                restaurante.comensalesEnRestaurante--;
 
-            // Liberar espacio en el restaurante
-            restaurante.comensalesEnRestaurante--;
-            restaurante.mesasOcupadas--;
+                System.out.println("Comensal sale del restaurante. Comensales en el restaurante: " +
+                        restaurante.comensalesEnRestaurante + ". Mesas ocupadas en el restaurante: " +
+                        restaurante.mesasOcupadas);
 
-            System.out.println("Comensal sale del restaurante. Comensales en el restaurante: " +
-                    restaurante.comensalesEnRestaurante + ". Mesas disponibles en el restaurante: " +
-                    restaurante.mesasOcupadas);
+                // Notificar al chef que hay espacio para cocinar más
+                restaurante.bufferVacio.signal();
+            }
 
-            // Notificar al chef que hay espacio para cocinar más
-            restaurante.bufferDeComidaListo = false;
-            restaurante.bufferLleno.signal();
         } finally {
             restaurante.lock.unlock();
         }

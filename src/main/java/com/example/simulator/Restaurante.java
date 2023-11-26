@@ -19,8 +19,9 @@ public class Restaurante {
     public Condition recepcionistaCondition = recepcionistaLock.newCondition();
     public int numCocineros;
     public Queue<Orden> bufferOrdenes = new LinkedList<>();
-    public Queue<Comida> bufferComidas = new LinkedList<>();
     public Queue<Comensal> colaEspera = new LinkedList<>();
+    public static final int TAMANO_BUFFER_COMIDA = 5;
+    public Queue<Comida> bufferComidas = new LinkedList<>();
 
     public Restaurante() {
         this.numCocineros = (int) (CAPACIDAD_MAXIMA * 0.1);
