@@ -3,10 +3,14 @@ package com.example.simulator.threads;
 import com.example.simulator.HelloController;
 import com.example.simulator.Restaurante;
 import com.example.simulator.Orden;
+import javafx.scene.control.Label;
+import javafx.scene.layout.Pane;
 
 public class Recepcionista implements Runnable {
     private Restaurante restaurante;
     private HelloController controller;
+    private int sum = 0;
+
 
     public Recepcionista(Restaurante restaurante, HelloController controller) {
         this.restaurante = restaurante;
@@ -33,7 +37,9 @@ public class Recepcionista implements Runnable {
             }
 
             restaurante.comensalesEnRestaurante++;
+            sum = sum + 1;
             restaurante.mesasOcupadas++;
+            controller.updateComensalStatus("COMENSAL "+ sum);
             System.out.println("Comensal entra al restaurante. Comensales en el restaurante: " + restaurante.comensalesEnRestaurante +
                     ". Mesas ocupadas: " + restaurante.mesasOcupadas);
 

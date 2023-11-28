@@ -22,7 +22,8 @@ public class Comensal implements Runnable {
                 recepcionista.entrarComensal();
                 // Intentar contactar al mesero
                 if (controller != null) {
-                    Platform.runLater(() -> controller.updateMeseroStatus("Llamando al mesero"));
+                    Platform.runLater(() ->
+                            controller.updateMeseroStatus("Llamando al mesero"));
                 }
 
                 // Simular tiempo dentro del restaurante

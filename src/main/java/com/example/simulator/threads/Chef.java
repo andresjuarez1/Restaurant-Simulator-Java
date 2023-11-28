@@ -37,7 +37,6 @@ public class Chef implements Runnable {
                     Comida comida = new Comida(orden);
                     restaurante.bufferComidas.offer(comida);
                 }
-                //this.controller.updateChefStatus("Chef ha cocinado la orden. Comida en el buffer: " + restaurante.bufferComidas.size());
                 System.out.println("Chef ha cocinado la orden. Comida en el buffer: " + restaurante.bufferComidas.size());
             }
         } finally {
@@ -51,11 +50,13 @@ public class Chef implements Runnable {
         while (running) {
             try {
                 cocinar();
-                Platform.runLater(() -> {
                     if (this.controller != null) {
+                        this.controller.updateBufferOrdenesTextArea(restaurante.bufferOrdenes.size() + " TOTAL");
+                        this.controller.updateBufferComidaTextArea(restaurante.bufferComidas.size() + " TOTAL");
                         this.controller.updateChefStatus("Cocinando");
+                        this.controller.updateChefStatus("Chef ha cocinado la orden. Comida en el buffer: " + restaurante.bufferComidas.size());
+                        //System.out.println("cocinando");
                     }
-                });
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
                 e.printStackTrace();

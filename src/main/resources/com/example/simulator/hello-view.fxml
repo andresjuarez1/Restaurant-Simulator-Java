@@ -41,12 +41,12 @@
                         </Pane>
                         <Pane accessibleText="MESA 1" layoutY="20.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: transparent;">
                            <children>
-                              <Label layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
+                              <Label fx:id="mesa1" layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
                                  <font>
                                     <Font name="Calibri Bold" size="12.0" />
                                  </font>
                               </Label>
-                              <Pane accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
+                              <Pane fx:id="s1" accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
                            </children>
                         </Pane>
                      </children>
@@ -64,12 +64,12 @@
                         </Pane>
                         <Pane accessibleText="MESA 1" layoutY="20.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: transparent;">
                            <children>
-                              <Label layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
+                              <Label fx:id="mesa2" layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
                                  <font>
                                     <Font name="Calibri Bold" size="12.0" />
                                  </font>
                               </Label>
-                              <Pane accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
+                              <Pane fx:id="s2" accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
                            </children>
                         </Pane>
                      </children>
@@ -90,12 +90,12 @@
                         </Pane>
                         <Pane accessibleText="MESA 1" layoutY="20.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: transparent;">
                            <children>
-                              <Label layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
+                              <Label fx:id="mesa6" layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
                                  <font>
                                     <Font name="Calibri Bold" size="12.0" />
                                  </font>
                               </Label>
-                              <Pane accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
+                              <Pane fx:id="s6" accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
                            </children>
                         </Pane>
                      </children>
@@ -113,12 +113,12 @@
                         </Pane>
                         <Pane accessibleText="MESA 1" layoutY="20.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: transparent;">
                            <children>
-                              <Label layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
+                              <Label fx:id="mesa7" layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
                                  <font>
                                     <Font name="Calibri Bold" size="12.0" />
                                  </font>
                               </Label>
-                              <Pane accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
+                              <Pane fx:id="s7" accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
                            </children>
                         </Pane>
                      </children>
@@ -139,12 +139,12 @@
                         </Pane>
                         <Pane accessibleText="MESA 1" layoutY="20.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: transparent;">
                            <children>
-                              <Label layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
+                              <Label fx:id="mesa11" layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
                                  <font>
                                     <Font name="Calibri Bold" size="12.0" />
                                  </font>
                               </Label>
-                              <Pane accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
+                              <Pane fx:id="s11" accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
                            </children>
                         </Pane>
                      </children>
@@ -162,12 +162,12 @@
                         </Pane>
                         <Pane accessibleText="MESA 1" layoutY="20.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: transparent;">
                            <children>
-                              <Label layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
+                              <Label fx:id="mesa16" layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
                                  <font>
                                     <Font name="Calibri Bold" size="12.0" />
                                  </font>
                               </Label>
-                              <Pane accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
+                              <Pane fx:id="s16" accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
                            </children>
                         </Pane>
                      </children>
@@ -185,12 +185,12 @@
                         </Pane>
                         <Pane accessibleText="MESA 1" layoutY="20.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: transparent;">
                            <children>
-                              <Label layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
+                              <Label fx:id="mesa12" layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
                                  <font>
                                     <Font name="Calibri Bold" size="12.0" />
                                  </font>
                               </Label>
-                              <Pane accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
+                              <Pane fx:id="s12" accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
                            </children>
                         </Pane>
                      </children>
@@ -211,12 +211,12 @@
                         </Pane>
                         <Pane accessibleText="MESA 1" layoutY="20.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: transparent;">
                            <children>
-                              <Label layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
+                              <Label fx:id="mesa17" layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
                                  <font>
                                     <Font name="Calibri Bold" size="12.0" />
                                  </font>
                               </Label>
-                              <Pane accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
+                              <Pane fx:id="s17" accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
                            </children>
                         </Pane>
                      </children>
@@ -237,12 +237,12 @@
                         </Pane>
                         <Pane accessibleText="MESA 1" layoutY="20.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: transparent;">
                            <children>
-                              <Label layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
+                              <Label fx:id="mesa3" layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
                                  <font>
                                     <Font name="Calibri Bold" size="12.0" />
                                  </font>
                               </Label>
-                              <Pane accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
+                              <Pane fx:id="s3" accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
                            </children>
                         </Pane>
                      </children>
@@ -260,12 +260,12 @@
                         </Pane>
                         <Pane accessibleText="MESA 1" layoutY="20.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: transparent;">
                            <children>
-                              <Label layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
+                              <Label fx:id="mesa8" layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
                                  <font>
                                     <Font name="Calibri Bold" size="12.0" />
                                  </font>
                               </Label>
-                              <Pane accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
+                              <Pane fx:id="s8" accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
                            </children>
                         </Pane>
                      </children>
@@ -283,12 +283,12 @@
                         </Pane>
                         <Pane accessibleText="MESA 1" layoutY="20.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: transparent;">
                            <children>
-                              <Label layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
+                              <Label fx:id="mesa13" layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
                                  <font>
                                     <Font name="Calibri Bold" size="12.0" />
                                  </font>
                               </Label>
-                              <Pane accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
+                              <Pane fx:id="s13" accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
                            </children>
                         </Pane>
                      </children>
@@ -306,12 +306,12 @@
                         </Pane>
                         <Pane accessibleText="MESA 1" layoutY="20.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: transparent;">
                            <children>
-                              <Label layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
+                              <Label fx:id="mesa18" layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
                                  <font>
                                     <Font name="Calibri Bold" size="12.0" />
                                  </font>
                               </Label>
-                              <Pane accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
+                              <Pane fx:id="s18" accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
                            </children>
                         </Pane>
                      </children>
@@ -329,12 +329,12 @@
                         </Pane>
                         <Pane accessibleText="MESA 1" layoutY="20.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: transparent;">
                            <children>
-                              <Label layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
+                              <Label fx:id="mesa4" layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
                                  <font>
                                     <Font name="Calibri Bold" size="12.0" />
                                  </font>
                               </Label>
-                              <Pane accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
+                              <Pane fx:id="s4" accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
                            </children>
                         </Pane>
                      </children>
@@ -355,12 +355,12 @@
                         </Pane>
                         <Pane accessibleText="MESA 1" layoutY="20.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: transparent;">
                            <children>
-                              <Label layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
+                              <Label fx:id="mesa9" layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
                                  <font>
                                     <Font name="Calibri Bold" size="12.0" />
                                  </font>
                               </Label>
-                              <Pane accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
+                              <Pane fx:id="s9" accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
                            </children>
                         </Pane>
                      </children>
@@ -381,12 +381,12 @@
                         </Pane>
                         <Pane accessibleText="MESA 1" layoutY="20.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: transparent;">
                            <children>
-                              <Label layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
+                              <Label fx:id="mesa14" layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
                                  <font>
                                     <Font name="Calibri Bold" size="12.0" />
                                  </font>
                               </Label>
-                              <Pane accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
+                              <Pane fx:id="s14" accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
                            </children>
                         </Pane>
                      </children>
@@ -407,12 +407,12 @@
                         </Pane>
                         <Pane accessibleText="MESA 1" layoutY="20.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: transparent;">
                            <children>
-                              <Label layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
+                              <Label fx:id="mesa19" layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
                                  <font>
                                     <Font name="Calibri Bold" size="12.0" />
                                  </font>
                               </Label>
-                              <Pane accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
+                              <Pane fx:id="s19" accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
                            </children>
                         </Pane>
                      </children>
@@ -433,12 +433,12 @@
                         </Pane>
                         <Pane accessibleText="MESA 1" layoutY="20.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: transparent;">
                            <children>
-                              <Label layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
+                              <Label fx:id="mesa5" layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
                                  <font>
                                     <Font name="Calibri Bold" size="12.0" />
                                  </font>
                               </Label>
-                              <Pane accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
+                              <Pane fx:id="s5" accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
                            </children>
                         </Pane>
                      </children>
@@ -456,12 +456,12 @@
                         </Pane>
                         <Pane accessibleText="MESA 1" layoutY="20.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: transparent;">
                            <children>
-                              <Label layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
+                              <Label fx:id="mesa10" layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
                                  <font>
                                     <Font name="Calibri Bold" size="12.0" />
                                  </font>
                               </Label>
-                              <Pane accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
+                              <Pane fx:id="s10" accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
                            </children>
                         </Pane>
                      </children>
@@ -479,12 +479,12 @@
                         </Pane>
                         <Pane accessibleText="MESA 1" layoutY="20.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: transparent;">
                            <children>
-                              <Label layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
+                              <Label fx:id="mesa15" layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
                                  <font>
                                     <Font name="Calibri Bold" size="12.0" />
                                  </font>
                               </Label>
-                              <Pane accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
+                              <Pane fx:id="s15" accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
                            </children>
                         </Pane>
                      </children>
@@ -502,12 +502,12 @@
                         </Pane>
                         <Pane accessibleText="MESA 1" layoutY="20.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: transparent;">
                            <children>
-                              <Label layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
+                              <Label fx:id="mesa20" layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
                                  <font>
                                     <Font name="Calibri Bold" size="12.0" />
                                  </font>
                               </Label>
-                              <Pane accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
+                              <Pane fx:id="s20" accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
                            </children>
                         </Pane>
                      </children>
@@ -629,9 +629,9 @@
             </Label>
          </children>
       </Pane>
-      <Pane fx:id="bufferOrdenesTextArea" accessibleText="MESA 1" layoutX="450.0" layoutY="512.0" prefHeight="34.0" prefWidth="180.0" style="-fx-background-color: #6C6C6C;">
+      <Pane accessibleText="MESA 1" layoutX="450.0" layoutY="512.0" prefHeight="34.0" prefWidth="180.0" style="-fx-background-color: #6C6C6C;">
          <children>
-            <Label alignment="CENTER" layoutX="20.0" layoutY="2.0" prefHeight="28.0" prefWidth="136.0" text="0" textFill="WHITE">
+            <Label fx:id="bufferOrdenesLabel" alignment="CENTER" layoutX="20.0" layoutY="2.0" prefHeight="28.0" prefWidth="136.0" text="0" textFill="WHITE">
                <font>
                   <Font name="Calibri Bold" size="16.0" />
                </font>
@@ -647,9 +647,9 @@
             </Label>
          </children>
       </Pane>
-      <Pane fx:id="bufferComidaTextArea" accessibleText="MESA 1" layoutX="644.0" layoutY="512.0" prefHeight="34.0" prefWidth="180.0" style="-fx-background-color: #6C6C6C;">
+      <Pane accessibleText="MESA 1" layoutX="644.0" layoutY="512.0" prefHeight="34.0" prefWidth="180.0" style="-fx-background-color: #6C6C6C;">
          <children>
-            <Label alignment="CENTER" layoutX="20.0" layoutY="2.0" prefHeight="28.0" prefWidth="136.0" text="0" textFill="WHITE">
+            <Label fx:id="bufferComidaLabel" alignment="CENTER" layoutX="20.0" layoutY="2.0" prefHeight="28.0" prefWidth="136.0" text="0" textFill="WHITE">
                <font>
                   <Font name="Calibri Bold" size="16.0" />
                </font>

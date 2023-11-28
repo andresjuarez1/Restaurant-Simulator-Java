@@ -42,7 +42,6 @@ public class Restaurante {
             // Tomar la comida del buffer y notificar a los meseros que la orden está lista
             Comida comida = bufferComidas.poll();
             System.out.println("Mesero, la orden está lista para ser servida.");
-
             // Notificar a los meseros que la comida está lista
             bufferLleno.signal();
         } finally {
