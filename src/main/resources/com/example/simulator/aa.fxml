@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+
+<TitledPane animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="607.0" prefWidth="722.0" text="untitled" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+         <children>
+            <Circle fill="#f80303" layoutX="676.0" layoutY="514.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="WHITE" layoutX="67.0" layoutY="242.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="WHITE" layoutX="67.0" layoutY="327.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="WHITE" layoutX="67.0" layoutY="415.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="WHITE" layoutX="67.0" layoutY="504.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="WHITE" layoutX="164.0" layoutY="155.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="WHITE" layoutX="164.0" layoutY="242.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="WHITE" layoutX="164.0" layoutY="327.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="WHITE" layoutX="164.0" layoutY="415.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="WHITE" layoutX="164.0" layoutY="504.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="WHITE" layoutX="257.0" layoutY="415.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="WHITE" layoutX="257.0" layoutY="327.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="WHITE" layoutX="257.0" layoutY="242.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="WHITE" layoutX="257.0" layoutY="155.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="WHITE" layoutX="257.0" layoutY="504.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="WHITE" layoutX="348.0" layoutY="504.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="WHITE" layoutX="348.0" layoutY="415.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="WHITE" layoutX="348.0" layoutY="327.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="WHITE" layoutX="348.0" layoutY="242.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="WHITE" layoutX="348.0" layoutY="155.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="WHITE" layoutX="437.0" layoutY="155.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="WHITE" layoutX="437.0" layoutY="327.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="WHITE" layoutX="437.0" layoutY="242.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="WHITE" layoutX="437.0" layoutY="415.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="WHITE" layoutX="437.0" layoutY="504.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="#1fe3ff" layoutX="687.0" layoutY="104.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+            <Line endX="380.0" layoutX="198.0" layoutY="79.0" startX="-198.0" strokeWidth="4.0" />
+            <Circle fill="#ff9898" layoutX="676.0" layoutY="390.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+            <Line endX="109.0" layoutX="611.0" layoutY="452.0" startX="27.0" strokeWidth="3.0" />
+            <Circle fill="WHITE" layoutX="67.0" layoutY="155.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+            <Line endX="87.5" endY="32.0" layoutX="549.0" layoutY="514.0" startX="87.5" startY="67.0" strokeWidth="3.0" />
+            <Line endX="87.5" endY="14.0" layoutX="548.0" layoutY="438.0" startX="87.5" startY="48.0" strokeWidth="3.0" />
+            <Line endX="69.0" endY="15.5" layoutX="571.0" layoutY="324.0" startX="149.0" startY="15.5" strokeWidth="3.0" />
+         </children></AnchorPane>
+  </content>
+</TitledPane>
