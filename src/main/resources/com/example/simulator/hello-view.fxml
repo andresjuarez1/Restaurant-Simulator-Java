@@ -9,15 +9,15 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<GridPane alignment="center" hgap="10" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="com.example.simulator.HelloController">
+<GridPane alignment="center" hgap="10" prefHeight="522.0" prefWidth="662.0" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="com.example.simulator.HelloController">
     <Label text="Salida de la Consola" GridPane.rowIndex="7" />
     <TextArea fx:id="consoleTextArea" editable="false" prefHeight="103.0" prefWidth="600" GridPane.rowIndex="8" />
-   <Pane prefHeight="250.0" prefWidth="560.0" style="-fx-background-color: ADADAD;" GridPane.rowIndex="2">
+   <Pane prefHeight="274.0" prefWidth="597.0" style="-fx-background-color: ADADAD;" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.rowSpan="2" GridPane.valignment="CENTER">
       <GridPane.margin>
          <Insets left="20.0" right="20.0" />
       </GridPane.margin>
       <children>
-         <GridPane prefHeight="250.0" prefWidth="560.0">
+         <GridPane alignment="TOP_RIGHT" layoutX="20.0" layoutY="14.0" prefHeight="255.0" prefWidth="560.0">
            <columnConstraints>
              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
              <ColumnConstraints hgrow="SOMETIMES" prefWidth="100.0" />
@@ -30,27 +30,488 @@
              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
            </rowConstraints>
             <children>
-               <Pane accessibleText="MESA 1" minWidth="-Infinity" prefHeight="41.0" prefWidth="75.0" style="-fx-background-color: #6C6C6C;">
+               <Pane accessibleText="MESA 1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" style="-fx-background-color: #6C6C6C;" GridPane.valignment="TOP">
                   <children>
-                     <Pane accessibleText="MESA 1" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="20.0" prefWidth="112.0" style="-fx-background-color: #302D2D;">
+                     <Pane accessibleText="MESA 1" prefHeight="19.0" prefWidth="100.0" style="-fx-background-color: #302D2D;">
                         <children>
-                           <Label layoutX="34.0" layoutY="2.0" text="MESA 1" textFill="WHITE">
+                           <Label layoutX="28.0" layoutY="1.0" text="MESA 1" textFill="WHITE">
                               <font>
                                  <Font name="Calibri Bold" size="14.0" />
                               </font>
                            </Label>
                         </children>
                      </Pane>
-                     <Pane accessibleText="MESA 1" layoutY="20.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" prefWidth="112.0" style="-fx-background-color: transparent;">
+                     <Pane accessibleText="MESA 1" layoutY="20.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: transparent;">
                         <children>
-                           <Label layoutX="11.0" layoutY="7.0" text="EN ESPERA" textFill="WHITE">
+                           <Label layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
                               <font>
                                  <Font name="Calibri Bold" size="12.0" />
                               </font>
                            </Label>
+                           <Pane accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
+                        </children>
+                     </Pane>
+                  </children>
+               </Pane>
+               <Pane accessibleText="MESA 1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" style="-fx-background-color: #6C6C6C;" GridPane.columnIndex="1" GridPane.valignment="TOP">
+                  <children>
+                     <Pane accessibleText="MESA 1" prefHeight="19.0" prefWidth="100.0" style="-fx-background-color: #302D2D;">
+                        <children>
+                           <Label layoutX="28.0" layoutY="1.0" text="MESA 2" textFill="WHITE">
+                              <font>
+                                 <Font name="Calibri Bold" size="14.0" />
+                              </font>
+                           </Label>
+                        </children>
+                     </Pane>
+                     <Pane accessibleText="MESA 1" layoutY="20.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: transparent;">
+                        <children>
+                           <Label layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
+                              <font>
+                                 <Font name="Calibri Bold" size="12.0" />
+                              </font>
+                           </Label>
+                           <Pane accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
+                        </children>
+                     </Pane>
+                  </children>
+                  <GridPane.margin>
+                     <Insets left="4.0" />
+                  </GridPane.margin>
+               </Pane>
+               <Pane accessibleText="MESA 1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" style="-fx-background-color: #6C6C6C;" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                  <children>
+                     <Pane accessibleText="MESA 1" prefHeight="19.0" prefWidth="100.0" style="-fx-background-color: #302D2D;">
+                        <children>
+                           <Label layoutX="28.0" layoutY="1.0" text="MESA 6" textFill="WHITE">
+                              <font>
+                                 <Font name="Calibri Bold" size="14.0" />
+                              </font>
+                           </Label>
+                        </children>
+                     </Pane>
+                     <Pane accessibleText="MESA 1" layoutY="20.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: transparent;">
+                        <children>
+                           <Label layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
+                              <font>
+                                 <Font name="Calibri Bold" size="12.0" />
+                              </font>
+                           </Label>
+                           <Pane accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
+                        </children>
+                     </Pane>
+                  </children>
+               </Pane>
+               <Pane accessibleText="MESA 1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" style="-fx-background-color: #6C6C6C;" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                  <children>
+                     <Pane accessibleText="MESA 1" prefHeight="19.0" prefWidth="100.0" style="-fx-background-color: #302D2D;">
+                        <children>
+                           <Label layoutX="28.0" layoutY="1.0" text="MESA 7" textFill="WHITE">
+                              <font>
+                                 <Font name="Calibri Bold" size="14.0" />
+                              </font>
+                           </Label>
+                        </children>
+                     </Pane>
+                     <Pane accessibleText="MESA 1" layoutY="20.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: transparent;">
+                        <children>
+                           <Label layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
+                              <font>
+                                 <Font name="Calibri Bold" size="12.0" />
+                              </font>
+                           </Label>
+                           <Pane accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
+                        </children>
+                     </Pane>
+                  </children>
+                  <GridPane.margin>
+                     <Insets left="4.0" />
+                  </GridPane.margin>
+               </Pane>
+               <Pane accessibleText="MESA 1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" style="-fx-background-color: #6C6C6C;" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                  <children>
+                     <Pane accessibleText="MESA 1" prefHeight="19.0" prefWidth="100.0" style="-fx-background-color: #302D2D;">
+                        <children>
+                           <Label layoutX="28.0" layoutY="1.0" text="MESA 11" textFill="WHITE">
+                              <font>
+                                 <Font name="Calibri Bold" size="14.0" />
+                              </font>
+                           </Label>
+                        </children>
+                     </Pane>
+                     <Pane accessibleText="MESA 1" layoutY="20.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: transparent;">
+                        <children>
+                           <Label layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
+                              <font>
+                                 <Font name="Calibri Bold" size="12.0" />
+                              </font>
+                           </Label>
+                           <Pane accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
+                        </children>
+                     </Pane>
+                  </children>
+               </Pane>
+               <Pane accessibleText="MESA 1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" style="-fx-background-color: #6C6C6C;" GridPane.rowIndex="3" GridPane.valignment="TOP">
+                  <children>
+                     <Pane accessibleText="MESA 1" prefHeight="19.0" prefWidth="100.0" style="-fx-background-color: #302D2D;">
+                        <children>
+                           <Label layoutX="28.0" layoutY="1.0" text="MESA 16" textFill="WHITE">
+                              <font>
+                                 <Font name="Calibri Bold" size="14.0" />
+                              </font>
+                           </Label>
+                        </children>
+                     </Pane>
+                     <Pane accessibleText="MESA 1" layoutY="20.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: transparent;">
+                        <children>
+                           <Label layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
+                              <font>
+                                 <Font name="Calibri Bold" size="12.0" />
+                              </font>
+                           </Label>
+                           <Pane accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
+                        </children>
+                     </Pane>
+                  </children>
+               </Pane>
+               <Pane accessibleText="MESA 1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" style="-fx-background-color: #6C6C6C;" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                  <children>
+                     <Pane accessibleText="MESA 1" prefHeight="19.0" prefWidth="100.0" style="-fx-background-color: #302D2D;">
+                        <children>
+                           <Label layoutX="28.0" layoutY="1.0" text="MESA 12" textFill="WHITE">
+                              <font>
+                                 <Font name="Calibri Bold" size="14.0" />
+                              </font>
+                           </Label>
+                        </children>
+                     </Pane>
+                     <Pane accessibleText="MESA 1" layoutY="20.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: transparent;">
+                        <children>
+                           <Label layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
+                              <font>
+                                 <Font name="Calibri Bold" size="12.0" />
+                              </font>
+                           </Label>
+                           <Pane accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
+                        </children>
+                     </Pane>
+                  </children>
+                  <GridPane.margin>
+                     <Insets left="4.0" />
+                  </GridPane.margin>
+               </Pane>
+               <Pane accessibleText="MESA 1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" style="-fx-background-color: #6C6C6C;" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.valignment="TOP">
+                  <children>
+                     <Pane accessibleText="MESA 1" prefHeight="19.0" prefWidth="100.0" style="-fx-background-color: #302D2D;">
+                        <children>
+                           <Label layoutX="28.0" layoutY="1.0" text="MESA 17" textFill="WHITE">
+                              <font>
+                                 <Font name="Calibri Bold" size="14.0" />
+                              </font>
+                           </Label>
+                        </children>
+                     </Pane>
+                     <Pane accessibleText="MESA 1" layoutY="20.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: transparent;">
+                        <children>
+                           <Label layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
+                              <font>
+                                 <Font name="Calibri Bold" size="12.0" />
+                              </font>
+                           </Label>
+                           <Pane accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
+                        </children>
+                     </Pane>
+                  </children>
+                  <GridPane.margin>
+                     <Insets left="4.0" />
+                  </GridPane.margin>
+               </Pane>
+               <Pane accessibleText="MESA 1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" style="-fx-background-color: #6C6C6C;" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                  <children>
+                     <Pane accessibleText="MESA 1" prefHeight="19.0" prefWidth="100.0" style="-fx-background-color: #302D2D;">
+                        <children>
+                           <Label layoutX="28.0" layoutY="1.0" text="MESA 3" textFill="WHITE">
+                              <font>
+                                 <Font name="Calibri Bold" size="14.0" />
+                              </font>
+                           </Label>
+                        </children>
+                     </Pane>
+                     <Pane accessibleText="MESA 1" layoutY="20.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: transparent;">
+                        <children>
+                           <Label layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
+                              <font>
+                                 <Font name="Calibri Bold" size="12.0" />
+                              </font>
+                           </Label>
+                           <Pane accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
+                        </children>
+                     </Pane>
+                  </children>
+               </Pane>
+               <Pane accessibleText="MESA 1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" style="-fx-background-color: #6C6C6C;" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                  <children>
+                     <Pane accessibleText="MESA 1" prefHeight="19.0" prefWidth="100.0" style="-fx-background-color: #302D2D;">
+                        <children>
+                           <Label layoutX="28.0" layoutY="1.0" text="MESA 8" textFill="WHITE">
+                              <font>
+                                 <Font name="Calibri Bold" size="14.0" />
+                              </font>
+                           </Label>
+                        </children>
+                     </Pane>
+                     <Pane accessibleText="MESA 1" layoutY="20.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: transparent;">
+                        <children>
+                           <Label layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
+                              <font>
+                                 <Font name="Calibri Bold" size="12.0" />
+                              </font>
+                           </Label>
+                           <Pane accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
+                        </children>
+                     </Pane>
+                  </children>
+               </Pane>
+               <Pane accessibleText="MESA 1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" style="-fx-background-color: #6C6C6C;" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                  <children>
+                     <Pane accessibleText="MESA 1" prefHeight="19.0" prefWidth="100.0" style="-fx-background-color: #302D2D;">
+                        <children>
+                           <Label layoutX="28.0" layoutY="1.0" text="MESA 13" textFill="WHITE">
+                              <font>
+                                 <Font name="Calibri Bold" size="14.0" />
+                              </font>
+                           </Label>
+                        </children>
+                     </Pane>
+                     <Pane accessibleText="MESA 1" layoutY="20.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: transparent;">
+                        <children>
+                           <Label layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
+                              <font>
+                                 <Font name="Calibri Bold" size="12.0" />
+                              </font>
+                           </Label>
+                           <Pane accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
+                        </children>
+                     </Pane>
+                  </children>
+               </Pane>
+               <Pane accessibleText="MESA 1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" style="-fx-background-color: #6C6C6C;" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP">
+                  <children>
+                     <Pane accessibleText="MESA 1" prefHeight="19.0" prefWidth="100.0" style="-fx-background-color: #302D2D;">
+                        <children>
+                           <Label layoutX="28.0" layoutY="1.0" text="MESA 18" textFill="WHITE">
+                              <font>
+                                 <Font name="Calibri Bold" size="14.0" />
+                              </font>
+                           </Label>
+                        </children>
+                     </Pane>
+                     <Pane accessibleText="MESA 1" layoutY="20.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: transparent;">
+                        <children>
+                           <Label layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
+                              <font>
+                                 <Font name="Calibri Bold" size="12.0" />
+                              </font>
+                           </Label>
+                           <Pane accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
+                        </children>
+                     </Pane>
+                  </children>
+               </Pane>
+               <Pane accessibleText="MESA 1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" style="-fx-background-color: #6C6C6C;" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+                  <children>
+                     <Pane accessibleText="MESA 1" prefHeight="19.0" prefWidth="100.0" style="-fx-background-color: #302D2D;">
+                        <children>
+                           <Label layoutX="28.0" layoutY="1.0" text="MESA 4" textFill="WHITE">
+                              <font>
+                                 <Font name="Calibri Bold" size="14.0" />
+                              </font>
+                           </Label>
+                        </children>
+                     </Pane>
+                     <Pane accessibleText="MESA 1" layoutY="20.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: transparent;">
+                        <children>
+                           <Label layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
+                              <font>
+                                 <Font name="Calibri Bold" size="12.0" />
+                              </font>
+                           </Label>
+                           <Pane accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
+                        </children>
+                     </Pane>
+                  </children>
+                  <GridPane.margin>
+                     <Insets right="4.0" />
+                  </GridPane.margin>
+               </Pane>
+               <Pane accessibleText="MESA 1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" style="-fx-background-color: #6C6C6C;" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                  <children>
+                     <Pane accessibleText="MESA 1" prefHeight="19.0" prefWidth="100.0" style="-fx-background-color: #302D2D;">
+                        <children>
+                           <Label layoutX="28.0" layoutY="1.0" text="MESA 9" textFill="WHITE">
+                              <font>
+                                 <Font name="Calibri Bold" size="14.0" />
+                              </font>
+                           </Label>
+                        </children>
+                     </Pane>
+                     <Pane accessibleText="MESA 1" layoutY="20.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: transparent;">
+                        <children>
+                           <Label layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
+                              <font>
+                                 <Font name="Calibri Bold" size="12.0" />
+                              </font>
+                           </Label>
+                           <Pane accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
+                        </children>
+                     </Pane>
+                  </children>
+                  <GridPane.margin>
+                     <Insets right="4.0" />
+                  </GridPane.margin>
+               </Pane>
+               <Pane accessibleText="MESA 1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" style="-fx-background-color: #6C6C6C;" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                  <children>
+                     <Pane accessibleText="MESA 1" prefHeight="19.0" prefWidth="100.0" style="-fx-background-color: #302D2D;">
+                        <children>
+                           <Label layoutX="28.0" layoutY="1.0" text="MESA 14" textFill="WHITE">
+                              <font>
+                                 <Font name="Calibri Bold" size="14.0" />
+                              </font>
+                           </Label>
+                        </children>
+                     </Pane>
+                     <Pane accessibleText="MESA 1" layoutY="20.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: transparent;">
+                        <children>
+                           <Label layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
+                              <font>
+                                 <Font name="Calibri Bold" size="12.0" />
+                              </font>
+                           </Label>
+                           <Pane accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
+                        </children>
+                     </Pane>
+                  </children>
+                  <GridPane.margin>
+                     <Insets right="4.0" />
+                  </GridPane.margin>
+               </Pane>
+               <Pane accessibleText="MESA 1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" style="-fx-background-color: #6C6C6C;" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="TOP">
+                  <children>
+                     <Pane accessibleText="MESA 1" prefHeight="19.0" prefWidth="100.0" style="-fx-background-color: #302D2D;">
+                        <children>
+                           <Label layoutX="28.0" layoutY="1.0" text="MESA 19" textFill="WHITE">
+                              <font>
+                                 <Font name="Calibri Bold" size="14.0" />
+                              </font>
+                           </Label>
+                        </children>
+                     </Pane>
+                     <Pane accessibleText="MESA 1" layoutY="20.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: transparent;">
+                        <children>
+                           <Label layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
+                              <font>
+                                 <Font name="Calibri Bold" size="12.0" />
+                              </font>
+                           </Label>
+                           <Pane accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
+                        </children>
+                     </Pane>
+                  </children>
+                  <GridPane.margin>
+                     <Insets right="4.0" />
+                  </GridPane.margin>
+               </Pane>
+               <Pane accessibleText="MESA 1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" style="-fx-background-color: #6C6C6C;" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+                  <children>
+                     <Pane accessibleText="MESA 1" prefHeight="19.0" prefWidth="100.0" style="-fx-background-color: #302D2D;">
+                        <children>
+                           <Label layoutX="28.0" layoutY="1.0" text="MESA 5" textFill="WHITE">
+                              <font>
+                                 <Font name="Calibri Bold" size="14.0" />
+                              </font>
+                           </Label>
+                        </children>
+                     </Pane>
+                     <Pane accessibleText="MESA 1" layoutY="20.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: transparent;">
+                        <children>
+                           <Label layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
+                              <font>
+                                 <Font name="Calibri Bold" size="12.0" />
+                              </font>
+                           </Label>
+                           <Pane accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
+                        </children>
+                     </Pane>
+                  </children>
+               </Pane>
+               <Pane accessibleText="MESA 1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" style="-fx-background-color: #6C6C6C;" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                  <children>
+                     <Pane accessibleText="MESA 1" prefHeight="19.0" prefWidth="100.0" style="-fx-background-color: #302D2D;">
+                        <children>
+                           <Label layoutX="28.0" layoutY="1.0" text="MESA 10" textFill="WHITE">
+                              <font>
+                                 <Font name="Calibri Bold" size="14.0" />
+                              </font>
+                           </Label>
+                        </children>
+                     </Pane>
+                     <Pane accessibleText="MESA 1" layoutY="20.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: transparent;">
+                        <children>
+                           <Label layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
+                              <font>
+                                 <Font name="Calibri Bold" size="12.0" />
+                              </font>
+                           </Label>
+                           <Pane accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
+                        </children>
+                     </Pane>
+                  </children>
+               </Pane>
+               <Pane accessibleText="MESA 1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" style="-fx-background-color: #6C6C6C;" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                  <children>
+                     <Pane accessibleText="MESA 1" prefHeight="19.0" prefWidth="100.0" style="-fx-background-color: #302D2D;">
+                        <children>
+                           <Label layoutX="28.0" layoutY="1.0" text="MESA 15" textFill="WHITE">
+                              <font>
+                                 <Font name="Calibri Bold" size="14.0" />
+                              </font>
+                           </Label>
+                        </children>
+                     </Pane>
+                     <Pane accessibleText="MESA 1" layoutY="20.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: transparent;">
+                        <children>
+                           <Label layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
+                              <font>
+                                 <Font name="Calibri Bold" size="12.0" />
+                              </font>
+                           </Label>
+                           <Pane accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
+                        </children>
+                     </Pane>
+                  </children>
+               </Pane>
+               <Pane accessibleText="MESA 1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" style="-fx-background-color: #6C6C6C;" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="TOP">
+                  <children>
+                     <Pane accessibleText="MESA 1" prefHeight="19.0" prefWidth="100.0" style="-fx-background-color: #302D2D;">
+                        <children>
+                           <Label layoutX="28.0" layoutY="1.0" text="MESA 20" textFill="WHITE">
+                              <font>
+                                 <Font name="Calibri Bold" size="14.0" />
+                              </font>
+                           </Label>
+                        </children>
+                     </Pane>
+                     <Pane accessibleText="MESA 1" layoutY="20.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: transparent;">
+                        <children>
+                           <Label layoutX="11.0" layoutY="6.0" prefHeight="14.0" prefWidth="70.0" text="EN ESPERA" textFill="WHITE">
+                              <font>
+                                 <Font name="Calibri Bold" size="12.0" />
+                              </font>
+                           </Label>
+                           <Pane accessibleText="MESA 1" focusTraversable="true" layoutX="80.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
                         </children>
                      </Pane>
                   </children>
@@ -63,9 +524,9 @@
       <ColumnConstraints />
    </columnConstraints>
    <rowConstraints>
-      <RowConstraints />
-      <RowConstraints />
-      <RowConstraints />
+      <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+      <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+      <RowConstraints maxHeight="263.2" minHeight="263.2" prefHeight="263.2" />
       <RowConstraints />
       <RowConstraints />
       <RowConstraints />
