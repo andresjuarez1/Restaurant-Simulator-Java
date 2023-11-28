@@ -5,11 +5,6 @@
 <?import javafx.scene.control.TextArea?>
 
 <GridPane xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10" fx:controller="com.example.simulator.HelloController">
-    <Label text="Estado del Restaurante" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-    <Label fx:id="chefLabel" text="Chef: Esperando" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-    <Label fx:id="meseroLabel" text="Mesero: Esperando" GridPane.columnIndex="0" GridPane.rowIndex="2" />
-    <Label fx:id="comensalLabel" text="Comensal: Esperando" GridPane.columnIndex="0" GridPane.rowIndex="3" />
-    <Label fx:id="recepcionistaLabel" text="Recepcionista: Esperando" GridPane.columnIndex="0" GridPane.rowIndex="4" />
     <Label text="Salida de la Consola" GridPane.columnIndex="0" GridPane.rowIndex="5" />
     <TextArea fx:id="consoleTextArea" GridPane.columnIndex="0" GridPane.rowIndex="6" editable="false" prefWidth="600" prefHeight="500" />
 </GridPane>

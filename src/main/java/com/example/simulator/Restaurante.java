@@ -26,29 +26,4 @@ public class Restaurante {
     public Restaurante() {
         this.numCocineros = (int) (CAPACIDAD_MAXIMA * 0.1);
     }
-
-
-    public void verificarOrdenLista() throws InterruptedException {
-        lock.lock();
-        try {
-            // Espera hasta que haya comida en el buffer de comidas
-            while (bufferComidas.isEmpty()) {
-                bufferVacio.await();
-            }
-
-            // Simular tiempo de verificar la orden
-            Thread.sleep(1000);
-
-            // Tomar la comida del buffer y notificar a los meseros que la orden está lista
-            Comida comida = bufferComidas.poll();
-            System.out.println("Mesero, la orden está lista para ser servida.");
-
-            // Notificar a los meseros que la comida está lista
-            bufferLleno.signal();
-        } finally {
-            lock.unlock();
-        }
-    }
 }
-
-
