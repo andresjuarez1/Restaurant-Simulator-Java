@@ -37,7 +37,7 @@ public class Chef implements Runnable {
                     Comida comida = new Comida(orden);
                     restaurante.bufferComidas.offer(comida);
                 }
-
+                //this.controller.updateChefStatus("Chef ha cocinado la orden. Comida en el buffer: " + restaurante.bufferComidas.size());
                 System.out.println("Chef ha cocinado la orden. Comida en el buffer: " + restaurante.bufferComidas.size());
             }
         } finally {
@@ -62,6 +62,7 @@ public class Chef implements Runnable {
             }
         }
     }
+
 
 
     public void stopRunning() {

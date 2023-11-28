@@ -10,20 +10,19 @@ import java.io.OutputStream;
 import java.io.PrintStream;
 
 public class HelloController {
-    @FXML
-    private Label chefLabel;
 
     @FXML
-    private Label meseroLabel;
+    private TextArea cocineroTextArea;
 
     @FXML
-    private Label comensalLabel;
-
-    @FXML
-    private Label recepcionistaLabel;
+    private TextArea comensalTextArea;
 
     @FXML
     private TextArea consoleTextArea;
+
+    @FXML
+    private TextArea meseroTextArea;
+
 
     public void updateConsole(String message) {
         Platform.runLater(() -> {
@@ -33,18 +32,18 @@ public class HelloController {
     }
 
     public void updateChefStatus(String status) {
-        Platform.runLater(() -> chefLabel.setText("Chef: " + status));
+        Platform.runLater(() -> cocineroTextArea.appendText("Chef: " + status + "\n"));
     }
 
     public void updateMeseroStatus(String status) {
-        Platform.runLater(() -> meseroLabel.setText("Mesero: " + status));
+        Platform.runLater(() -> meseroTextArea.appendText("Mesero: " + status + "\n"));
     }
 
     public void updateComensalStatus(String status) {
-        Platform.runLater(() -> comensalLabel.setText("Comensal: " + status));
+        Platform.runLater(() -> comensalTextArea.appendText("Comensal: " + status + "\n"));
     }
     public void updateRecepcionistaStatus(String status) {
-        Platform.runLater(() -> recepcionistaLabel.setText("Recepcionista: " + status));
+        // Platform.runLater(() -> recepcionistaLabel.setText("Recepcionista: " + status));
     }
 
     public void redirectSystemOutput() {
@@ -55,6 +54,7 @@ public class HelloController {
             public void write(int b) throws IOException {
                 if (b == '\n') {
                     updateConsole(buffer.toString());
+   ;
                     buffer.setLength(0); // Limpia el buffer después de cada nueva línea
                 } else {
                     buffer.append((char) b);

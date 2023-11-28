@@ -11,7 +11,7 @@
 
 <Pane accessibleText="PRINCIPAL" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulator.HelloController">
    <children>
-      <Pane layoutX="226.0" layoutY="26.0" prefHeight="274.0" prefWidth="597.0" style="-fx-background-color: ADADAD;">
+      <Pane layoutX="226.0" layoutY="26.0" prefHeight="274.0" prefWidth="598.0" style="-fx-background-color: ADADAD;">
          <children>
             <GridPane alignment="TOP_RIGHT" layoutX="20.0" layoutY="14.0" prefHeight="255.0" prefWidth="560.0">
                <columnConstraints>
@@ -516,16 +516,109 @@
             </GridPane>
          </children>
       </Pane>
-      <TextArea fx:id="consoleTextArea" editable="false" layoutX="258.0" layoutY="576.0" prefHeight="103.0" prefWidth="600" style="-fx-control-inner-background: gray; -fx-text-fill: white;" />
-      <TextArea layoutX="23.0" layoutY="63.0" prefHeight="200.0" prefWidth="180.0" style="-fx-control-inner-background: #ADADAD; -fx-text-fill: #3C3A3A;" />
+      <TextArea fx:id="consoleTextArea" layoutX="225.0" layoutY="490.0" prefHeight="229.0" prefWidth="600" style="-fx-control-inner-background: #ADADAD; -fx-text-fill: #3C3A3A;" />
+      <TextArea fx:id="comensalTextArea" layoutX="23.0" layoutY="62.0" prefHeight="238.0" prefWidth="180.0" style="-fx-control-inner-background: #ADADAD; -fx-text-fill: #3C3A3A;" />
       <Pane accessibleText="MESA 1" layoutX="23.0" layoutY="26.0" prefHeight="38.0" prefWidth="180.0" style="-fx-background-color: #302D2D;">
          <children>
-            <Label layoutX="28.0" prefHeight="38.0" prefWidth="136.0" text="COMENSALES" textFill="WHITE">
+            <Label layoutX="27.0" layoutY="4.0" prefHeight="28.0" prefWidth="136.0" text="COMENSALES" textFill="WHITE">
                <font>
                   <Font name="Calibri Bold" size="22.0" />
                </font>
             </Label>
          </children>
       </Pane>
+      <Pane accessibleText="MESA 1" layoutX="23.0" layoutY="311.0" prefHeight="38.0" prefWidth="180.0" style="-fx-background-color: #302D2D;">
+         <children>
+            <Label alignment="CENTER" layoutX="20.0" layoutY="5.0" prefHeight="28.0" prefWidth="136.0" text="ESTATUS" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane accessibleText="MESA 1" layoutX="23.0" layoutY="348.0" prefHeight="22.0" prefWidth="180.0" style="-fx-background-color: #6C6C6C;">
+         <children>
+            <Label alignment="CENTER" layoutX="20.0" layoutY="-3.0" prefHeight="28.0" prefWidth="136.0" text="COMENSALES" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane accessibleText="MESA 1" layoutX="23.0" layoutY="369.0" prefHeight="94.0" prefWidth="180.0" style="-fx-background-color: #ADADAD;">
+         <children>
+            <Label alignment="TOP_LEFT" layoutX="13.0" layoutY="7.0" prefHeight="28.0" prefWidth="136.0" text="ESPERANDO MESERO" textFill="#3c3a3a">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Label>
+            <Pane accessibleText="MESA 1" focusTraversable="true" layoutX="153.0" layoutY="9.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: #D6F900; -fx-border-color: #3C3A3A;" />
+            <Label alignment="TOP_LEFT" layoutX="13.0" layoutY="28.0" prefHeight="28.0" prefWidth="136.0" text="ESPERANDO ORDEN" textFill="#3c3a3a">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Label>
+            <Pane accessibleText="MESA 1" focusTraversable="true" layoutX="153.0" layoutY="30.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: red; -fx-border-color: #3C3A3A;" />
+            <Label alignment="TOP_LEFT" layoutX="13.0" layoutY="49.0" prefHeight="28.0" prefWidth="136.0" text="COMIENDO" textFill="#3c3a3a">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Label>
+            <Pane accessibleText="MESA 1" focusTraversable="true" layoutX="153.0" layoutY="51.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="14.0" prefWidth="14.0" style="-fx-background-color: #00EAF9; -fx-border-color: #3C3A3A;" />
+         </children>
+      </Pane>
+      <Pane accessibleText="MESA 1" layoutX="226.0" layoutY="311.0" prefHeight="38.0" prefWidth="290.0" style="-fx-background-color: #302D2D;">
+         <children>
+            <Label alignment="CENTER" layoutX="20.0" layoutY="5.0" prefHeight="28.0" prefWidth="246.0" text="MESEROS" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TextArea fx:id="meseroTextArea" layoutX="226.0" layoutY="369.0" prefHeight="94.0" prefWidth="290.0" style="-fx-control-inner-background: #ADADAD; -fx-text-fill: #3C3A3A; -fx-border-radius: 0;" />
+      <Pane accessibleText="MESA 1" layoutX="226.0" layoutY="348.0" prefHeight="22.0" prefWidth="290.0" style="-fx-background-color: #6C6C6C;">
+         <children>
+            <Label alignment="CENTER" layoutX="20.0" layoutY="-3.0" prefHeight="28.0" prefWidth="246.0" text="ATENDIENDO A:" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane accessibleText="MESA 1" layoutX="534.0" layoutY="311.0" prefHeight="38.0" prefWidth="290.0" style="-fx-background-color: #302D2D;">
+         <children>
+            <Label alignment="CENTER" layoutX="20.0" layoutY="5.0" prefHeight="28.0" prefWidth="246.0" text="COCINEROS" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TextArea fx:id="cocineroTextArea" layoutX="534.0" layoutY="369.0" prefHeight="94.0" prefWidth="290.0" style="-fx-control-inner-background: #ADADAD; -fx-text-fill: #3C3A3A; -fx-border-radius: 0;" />
+      <Pane accessibleText="MESA 1" layoutX="534.0" layoutY="348.0" prefHeight="22.0" prefWidth="290.0" style="-fx-background-color: #6C6C6C;">
+         <children>
+            <Label alignment="CENTER" layoutX="20.0" layoutY="-3.0" prefHeight="28.0" prefWidth="246.0" text="COCINANDO A:" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label alignment="CENTER" layoutX="328.0" layoutY="-3.0" prefHeight="28.0" prefWidth="246.0" text="ATENDIENDO A:" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Label>
+      <Pane accessibleText="MESA 1" layoutX="23.0" layoutY="490.0" prefHeight="229.0" prefWidth="180.0" style="-fx-background-color: #302D2D;">
+         <children>
+            <Label alignment="CENTER" layoutX="20.0" layoutY="5.0" prefHeight="218.0" prefWidth="136.0" text="TERMINAL" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane accessibleText="MESA 1" layoutX="203.0" layoutY="490.0" prefHeight="229.0" prefWidth="24.0" style="-fx-background-color: #6C6C6C;" />
    </children>
 </Pane>
