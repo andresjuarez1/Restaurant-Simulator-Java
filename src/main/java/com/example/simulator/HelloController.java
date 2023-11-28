@@ -4,12 +4,18 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.application.Platform;
+import javafx.scene.layout.Pane;
 
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintStream;
 
 public class HelloController {
+    @FXML
+    private Pane bufferComidaTextArea;
+
+    @FXML
+    private Pane bufferOrdenesTextArea;
 
     @FXML
     private TextArea cocineroTextArea;

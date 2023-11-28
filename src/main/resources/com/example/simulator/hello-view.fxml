@@ -516,7 +516,7 @@
             </GridPane>
          </children>
       </Pane>
-      <TextArea fx:id="consoleTextArea" layoutX="225.0" layoutY="490.0" prefHeight="229.0" prefWidth="600" style="-fx-control-inner-background: #ADADAD; -fx-text-fill: #3C3A3A;" />
+      <TextArea fx:id="consoleTextArea" layoutX="225.0" layoutY="558.0" prefHeight="161.0" prefWidth="600" style="-fx-control-inner-background: #ADADAD; -fx-text-fill: #3C3A3A;" />
       <TextArea fx:id="comensalTextArea" layoutX="23.0" layoutY="62.0" prefHeight="238.0" prefWidth="180.0" style="-fx-control-inner-background: #ADADAD; -fx-text-fill: #3C3A3A;" />
       <Pane accessibleText="MESA 1" layoutX="23.0" layoutY="26.0" prefHeight="38.0" prefWidth="180.0" style="-fx-background-color: #302D2D;">
          <children>
@@ -610,15 +610,105 @@
             <Font name="Calibri Bold" size="16.0" />
          </font>
       </Label>
-      <Pane accessibleText="MESA 1" layoutX="23.0" layoutY="490.0" prefHeight="229.0" prefWidth="180.0" style="-fx-background-color: #302D2D;">
+      <Pane accessibleText="MESA 1" layoutX="23.0" layoutY="558.0" prefHeight="161.0" prefWidth="180.0" style="-fx-background-color: #302D2D;">
          <children>
-            <Label alignment="CENTER" layoutX="20.0" layoutY="5.0" prefHeight="218.0" prefWidth="136.0" text="TERMINAL" textFill="WHITE">
+            <Label alignment="CENTER" layoutX="20.0" layoutY="5.0" prefHeight="152.0" prefWidth="136.0" text="TERMINAL" textFill="WHITE">
                <font>
                   <Font name="Calibri Bold" size="22.0" />
                </font>
             </Label>
          </children>
       </Pane>
-      <Pane accessibleText="MESA 1" layoutX="203.0" layoutY="490.0" prefHeight="229.0" prefWidth="24.0" style="-fx-background-color: #6C6C6C;" />
+      <Pane accessibleText="MESA 1" layoutX="203.0" layoutY="558.0" prefHeight="161.0" prefWidth="24.0" style="-fx-background-color: #6C6C6C;" />
+      <Pane accessibleText="MESA 1" layoutX="450.0" layoutY="476.0" prefHeight="38.0" prefWidth="180.0" style="-fx-background-color: #302D2D;">
+         <children>
+            <Label alignment="CENTER" layoutX="20.0" layoutY="5.0" prefHeight="28.0" prefWidth="136.0" text="BUFFER DE ORDENES" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="bufferOrdenesTextArea" accessibleText="MESA 1" layoutX="450.0" layoutY="512.0" prefHeight="34.0" prefWidth="180.0" style="-fx-background-color: #6C6C6C;">
+         <children>
+            <Label alignment="CENTER" layoutX="20.0" layoutY="2.0" prefHeight="28.0" prefWidth="136.0" text="0" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane accessibleText="MESA 1" layoutX="644.0" layoutY="475.0" prefHeight="38.0" prefWidth="180.0" style="-fx-background-color: #302D2D;">
+         <children>
+            <Label alignment="CENTER" layoutX="20.0" layoutY="5.0" prefHeight="28.0" prefWidth="136.0" text="BUFFER DE COMIDAS" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="bufferComidaTextArea" accessibleText="MESA 1" layoutX="644.0" layoutY="512.0" prefHeight="34.0" prefWidth="180.0" style="-fx-background-color: #6C6C6C;">
+         <children>
+            <Label alignment="CENTER" layoutX="20.0" layoutY="2.0" prefHeight="28.0" prefWidth="136.0" text="0" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane accessibleText="MESA 1" layoutX="23.0" layoutY="475.0" prefHeight="38.0" prefWidth="130.0" style="-fx-background-color: #302D2D;">
+         <children>
+            <Label alignment="CENTER" layoutX="11.0" layoutY="5.0" prefHeight="28.0" prefWidth="108.0" text="MESEROS" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane accessibleText="MESA 1" layoutX="23.0" layoutY="512.0" prefHeight="34.0" prefWidth="130.0" style="-fx-background-color: #ADADAD;">
+         <children>
+            <Label alignment="CENTER" layoutX="11.0" prefHeight="28.0" prefWidth="108.0" text="30% DE CAPACIDAD" textFill="#3c3a3a">
+               <font>
+                  <Font name="Calibri Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane accessibleText="MESA 1" layoutX="308.0" layoutY="475.0" prefHeight="38.0" prefWidth="130.0" style="-fx-background-color: #302D2D;">
+         <children>
+            <Label alignment="CENTER" layoutX="11.0" layoutY="5.0" prefHeight="28.0" prefWidth="108.0" text="RECEPCIONISTA" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane accessibleText="MESA 1" layoutX="308.0" layoutY="512.0" prefHeight="34.0" prefWidth="130.0" style="-fx-background-color: #ADADAD;">
+         <children>
+            <Label alignment="CENTER" layoutX="11.0" layoutY="4.0" prefHeight="28.0" prefWidth="108.0" text="ACTIVO" textFill="#3c3a3a">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane accessibleText="MESA 1" layoutX="165.0" layoutY="475.0" prefHeight="38.0" prefWidth="130.0" style="-fx-background-color: #302D2D;">
+         <children>
+            <Label alignment="CENTER" layoutX="11.0" layoutY="5.0" prefHeight="28.0" prefWidth="108.0" text="COCINEROS" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane accessibleText="MESA 1" layoutX="165.0" layoutY="512.0" prefHeight="34.0" prefWidth="130.0" style="-fx-background-color: #ADADAD;">
+         <children>
+            <Label alignment="CENTER" layoutX="11.0" prefHeight="28.0" prefWidth="108.0" text="10% DE CAPACIDAD" textFill="#3c3a3a">
+               <font>
+                  <Font name="Calibri Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
    </children>
 </Pane>
