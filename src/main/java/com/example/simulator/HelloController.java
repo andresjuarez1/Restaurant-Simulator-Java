@@ -26,8 +26,12 @@ public class HelloController {
     private TextArea consoleTextArea;
 
     public void updateConsole(String message) {
-        Platform.runLater(() -> consoleTextArea.appendText(message + "\n"));
+        Platform.runLater(() -> {
+            consoleTextArea.appendText(message + "\n");
+
+        });
     }
+
     public void updateChefStatus(String status) {
         Platform.runLater(() -> chefLabel.setText("Chef: " + status));
     }
