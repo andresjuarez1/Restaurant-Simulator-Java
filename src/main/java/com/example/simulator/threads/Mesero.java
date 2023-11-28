@@ -15,9 +15,9 @@ public class Mesero implements Runnable {
         this.controller = controller;
     }
 
-    public void verificarOrdenLista() throws InterruptedException {
-        restaurante.verificarOrdenLista();
-    }
+    //public void verificarOrdenLista() throws InterruptedException {
+      //  restaurante.verificarOrdenLista();
+    //}
 
     public void servirComida() throws InterruptedException {
         restaurante.lock.lock();
