@@ -2,7 +2,9 @@ package com.example.simulator.threads;
 
 import com.example.simulator.HelloController;
 import com.example.simulator.Restaurante;
+import com.example.simulator.threads.Recepcionista;
 import javafx.application.Platform;
+
 import java.util.Random;
 
 public class Comensal implements Runnable {
@@ -15,11 +17,13 @@ public class Comensal implements Runnable {
         this.controller = controller;
         this.recepcionista = recepcionista;
     }
+
     @Override
     public void run() {
         while (true) {
             try {
-                recepcionista.entrarComensal();
+                entrarRestaurante();
+
                 // Intentar contactar al mesero
                 if (controller != null) {
                     Platform.runLater(() ->
@@ -43,6 +47,12 @@ public class Comensal implements Runnable {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+        }
+    }
+
+    private synchronized void entrarRestaurante() throws InterruptedException {
+        synchronized (restaurante) {
+            recepcionista.entrarComensal();
         }
     }
 }
