@@ -15,25 +15,24 @@ public class Mesero implements Runnable {
         this.controller = controller;
     }
 
-    public void verificarOrdenLista() throws InterruptedException {
+    public synchronized void verificarOrdenLista() throws InterruptedException {
         restaurante.verificarOrdenLista();
     }
 
-    public void servirComida() throws InterruptedException {
-        restaurante.lock.lock();
-        try {
+    public synchronized void servirComida() throws InterruptedException {
+        synchronized (restaurante) {
             while (restaurante.comensalesEnRestaurante <= 0) {
-                if(firstNumber == 1){
+                if (firstNumber == 1) {
                     controller.updateMeseroStatus("clear");
                     firstNumber--;
                 }
                 controller.updateMeseroStatus("Mesero descansando");
                 System.out.println("Mesero descansando...");
-                restaurante.bufferVacio.await();
+                restaurante.wait();
             }
 
             if (!restaurante.bufferComidas.isEmpty()) {
-                sum = sum +1;
+                sum = sum + 1;
                 controller.updateStatusPanelPane(sum, "ok");
                 Thread.sleep(2000);
 
@@ -53,10 +52,8 @@ public class Mesero implements Runnable {
                         restaurante.mesasOcupadas);
                 controller.updateComensalStatus("clear");
 
-                restaurante.bufferVacio.signal();
+                restaurante.notify();
             }
-        } finally {
-            restaurante.lock.unlock();
         }
     }
 

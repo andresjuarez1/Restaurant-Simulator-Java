@@ -32,7 +32,7 @@ public class HelloController {
     private Pane s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20;
     Pane sMaster = s8;
     Label mesaMaster = mesa8;
-    public void updateStatusPanelPane(int sum, String status){
+    public synchronized void updateStatusPanelPane(int sum, String status) {
         System.out.println("Recibo esto: " + sum);
         System.out.println("Clase s: " +sum);
         if(1 == sum){
@@ -523,24 +523,23 @@ public class HelloController {
         });
     }
 
-    public void updateBufferComidaTextArea(String message){
+    public synchronized void updateBufferComidaTextArea(String message) {
         Platform.runLater(() -> {
             bufferComidaLabel.setText(message);
         });
     }
 
-    public void updateBufferOrdenesTextArea(String message){
+    public synchronized void updateBufferOrdenesTextArea(String message) {
         Platform.runLater(() -> {
             bufferOrdenesLabel.setText(message);
         });
     }
 
-    public void updateChefStatus(String status) {
-
+    public synchronized void updateChefStatus(String status) {
         Platform.runLater(() -> cocineroTextArea.appendText("Chef: " + status + "\n"));
     }
 
-    public void updateMeseroStatus(String status) {
+    public synchronized void updateMeseroStatus(String status) {
         if(status!="clear"){
             Platform.runLater(() -> meseroTextArea.appendText("Mesero: " + status + "\n"));
         }else{
@@ -548,7 +547,7 @@ public class HelloController {
         }
     }
 
-    public void updateComensalStatus(String status) {
+    public synchronized void updateComensalStatus(String status) {
         if(status!="clear"){
             Platform.runLater(() -> comensalTextArea.appendText("Comensal: " + status + "\n"));
         }else{

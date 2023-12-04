@@ -4,15 +4,11 @@ import com.example.simulator.Restaurante;
 import com.example.simulator.Orden;
 import com.example.simulator.Comida;
 import com.example.simulator.HelloController;
-import javafx.application.Platform;
 
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
 
 public class Chef implements Runnable {
     private Restaurante restaurante;
     private HelloController controller;
-    public Lock lock2 = new ReentrantLock();
     private volatile boolean running = true;
 
     public Chef(Restaurante restaurante, HelloController controller) {
@@ -21,14 +17,13 @@ public class Chef implements Runnable {
     }
 
     public void cocinar() throws InterruptedException {
-        restaurante.lock.lock();
-        try {
+        synchronized (restaurante) {
             while (restaurante.bufferOrdenes.isEmpty()) {
-                restaurante.bufferVacio.await();
+                restaurante.wait();
             }
 
             if (restaurante.bufferComidas.size() == 5) {
-                restaurante.bufferVacio.signal();  // Agrega esta línea para notificar al mesero
+                restaurante.notify(); // Agrega esta línea para notificar al mesero
             } else if (restaurante.bufferComidas.isEmpty()) {
                 Thread.sleep(4000);
 
@@ -39,11 +34,8 @@ public class Chef implements Runnable {
                 }
                 System.out.println("Chef ha cocinado la orden. Comida en el buffer: " + restaurante.bufferComidas.size());
             }
-        } finally {
-            restaurante.lock.unlock();
         }
     }
-
 
     @Override
     public void run() {
@@ -55,7 +47,6 @@ public class Chef implements Runnable {
                     this.controller.updateBufferComidaTextArea(restaurante.bufferComidas.size() + " TOTAL");
                     this.controller.updateChefStatus("Cocinando");
                     this.controller.updateChefStatus("Chef ha cocinado la orden. Comida en el buffer: " + restaurante.bufferComidas.size());
-                    //System.out.println("cocinando");
                 }
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
@@ -63,8 +54,6 @@ public class Chef implements Runnable {
             }
         }
     }
-
-
 
     public void stopRunning() {
         running = false;
