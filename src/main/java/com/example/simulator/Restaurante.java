@@ -1,7 +1,7 @@
 package com.example.simulator;
 
 import java.util.concurrent.locks.Condition;
-import com.example.simulator.threads.Comensal;
+import com.example.simulator.models.Comensal;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.LinkedList;
@@ -25,5 +25,21 @@ public class Restaurante {
 
     public Restaurante() {
         this.numCocineros = (int) (CAPACIDAD_MAXIMA * 0.1);
+    }
+
+    public synchronized void verificarOrdenLista() throws InterruptedException {
+        // Espera hasta que haya comida en el buffer de comidas
+        while (bufferComidas.isEmpty()) {
+            wait();
+        }
+
+        // Simular tiempo de verificar la orden
+        Thread.sleep(1000);
+
+        // Tomar la comida del buffer y notificar a los meseros que la orden está lista
+        Comida comida = bufferComidas.poll();
+        System.out.println("Mesero, la orden está lista para ser servida.");
+        // Notificar a los meseros que la comida está lista
+        notifyAll();
     }
 }
