@@ -1,7 +1,7 @@
 package com.example.simulator;
 
 import java.util.concurrent.locks.Condition;
-import com.example.simulator.threads.Comensal;
+import com.example.simulator.models.Comensal;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.LinkedList;
@@ -40,6 +40,6 @@ public class Restaurante {
         Comida comida = bufferComidas.poll();
         System.out.println("Mesero, la orden está lista para ser servida.");
         // Notificar a los meseros que la comida está lista
-        notify();
+        notifyAll();
     }
 }

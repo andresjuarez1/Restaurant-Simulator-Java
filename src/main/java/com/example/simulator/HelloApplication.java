@@ -7,10 +7,10 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-import com.example.simulator.threads.Chef;
-import com.example.simulator.threads.Mesero;
-//import com.example.simulator.threads.Comensal;
-import com.example.simulator.threads.Recepcionista;
+import com.example.simulator.models.Chef;
+import com.example.simulator.models.Mesero;
+import com.example.simulator.models.Comensal;
+import com.example.simulator.models.Recepcionista;
 
 public class HelloApplication extends Application {
     private HelloController controller;

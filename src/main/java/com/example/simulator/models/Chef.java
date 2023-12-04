@@ -1,4 +1,4 @@
-package com.example.simulator.threads;
+package com.example.simulator.models;
 
 import com.example.simulator.Restaurante;
 import com.example.simulator.Orden;

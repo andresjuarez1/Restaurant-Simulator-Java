@@ -1,4 +1,4 @@
-package com.example.simulator.threads;
+package com.example.simulator.models;
 
 import com.example.simulator.HelloController;
 import com.example.simulator.Restaurante;
@@ -15,11 +15,13 @@ public class Comensal implements Runnable {
         this.controller = controller;
         this.recepcionista = recepcionista;
     }
+
     @Override
     public void run() {
         while (true) {
             try {
-                recepcionista.entrarComensal();
+                entrarRestaurante();
+
                 // Intentar contactar al mesero
                 if (controller != null) {
                     Platform.runLater(() ->
@@ -44,5 +46,10 @@ public class Comensal implements Runnable {
                 e.printStackTrace();
             }
         }
+    }
+
+    // Método sincronizado para entrar al restaurante
+    private synchronized void entrarRestaurante() throws InterruptedException {
+        recepcionista.entrarComensal();
     }
 }
