@@ -50,13 +50,13 @@ public class Chef implements Runnable {
         while (running) {
             try {
                 cocinar();
-                    if (this.controller != null) {
-                        this.controller.updateBufferOrdenesTextArea(restaurante.bufferOrdenes.size() + " TOTAL");
-                        this.controller.updateBufferComidaTextArea(restaurante.bufferComidas.size() + " TOTAL");
-                        this.controller.updateChefStatus("Cocinando");
-                        this.controller.updateChefStatus("Chef ha cocinado la orden. Comida en el buffer: " + restaurante.bufferComidas.size());
-                        //System.out.println("cocinando");
-                    }
+                if (this.controller != null) {
+                    this.controller.updateBufferOrdenesTextArea(restaurante.bufferOrdenes.size() + " TOTAL");
+                    this.controller.updateBufferComidaTextArea(restaurante.bufferComidas.size() + " TOTAL");
+                    this.controller.updateChefStatus("Cocinando");
+                    this.controller.updateChefStatus("Chef ha cocinado la orden. Comida en el buffer: " + restaurante.bufferComidas.size());
+                    //System.out.println("cocinando");
+                }
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
                 e.printStackTrace();

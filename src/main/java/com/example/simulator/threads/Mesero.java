@@ -5,7 +5,7 @@ import com.example.simulator.Restaurante;
 import com.example.simulator.Comida;
 
 public class Mesero implements Runnable {
-    private Restaurante restaurante;
+    public Restaurante restaurante;
     private HelloController controller;
     private int sum = 0;
     private int firstNumber = 1;
@@ -15,20 +15,25 @@ public class Mesero implements Runnable {
         this.controller = controller;
     }
 
+    public void verificarOrdenLista() throws InterruptedException {
+        restaurante.verificarOrdenLista();
+    }
+
     public void servirComida() throws InterruptedException {
-        synchronized (restaurante) {
+        restaurante.lock.lock();
+        try {
             while (restaurante.comensalesEnRestaurante <= 0) {
-                if (firstNumber == 1) {
+                if(firstNumber == 1){
                     controller.updateMeseroStatus("clear");
                     firstNumber--;
                 }
                 controller.updateMeseroStatus("Mesero descansando");
                 System.out.println("Mesero descansando...");
-                restaurante.wait();
+                restaurante.bufferVacio.await();
             }
 
             if (!restaurante.bufferComidas.isEmpty()) {
-                sum = sum + 1;
+                sum = sum +1;
                 controller.updateStatusPanelPane(sum, "ok");
                 Thread.sleep(2000);
 
@@ -48,8 +53,10 @@ public class Mesero implements Runnable {
                         restaurante.mesasOcupadas);
                 controller.updateComensalStatus("clear");
 
-                restaurante.notify();
+                restaurante.bufferVacio.signal();
             }
+        } finally {
+            restaurante.lock.unlock();
         }
     }
 
